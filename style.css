@@ -1,0 +1,118 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #1a1a1a;
+  --body-bg: #111;
+  --surface: #232323;
+  --raised: #2c2c2c;
+  --border: #3a3a3a;
+  --text: #e8e0cc;
+  --dim: #888;
+  --accent: #e8a020;
+  --accent-dk: #b87818;
+  --red: #d94040;
+  --green: #4caf6e;
+  --mono: 'Share Tech Mono', monospace;
+  --display: 'Bebas Neue', cursive;
+}
+
+body {
+  background: var(--body-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: var(--mono);
+}
+
+.label-strip {
+  font-family: var(--display);
+  letter-spacing: .35em;
+  font-size: .68rem;
+  color: var(--dim);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.calc-shell {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 22px 20px 24px;
+  width: 320px;
+}
+
+.display-wrap {
+  background: #0d1610;
+  border-radius: 4px;
+  padding: 10px 14px 8px;
+  margin-bottom: 18px;
+}
+
+.display-expr {
+  font-size: .7rem;
+  color: #4a7a4a;
+  text-align: right;
+}
+
+.display-main {
+  font-family: var(--display);
+  font-size: 2.6rem;
+  color: #a8e0a0;
+  text-align: right;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+button {
+  font-family: var(--mono);
+  font-size: .95rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 58px;
+}
+
+.btn-num {
+  background: var(--raised);
+  color: var(--text);
+}
+
+.btn-op {
+  background: #2a2318;
+  color: var(--accent);
+}
+
+.btn-eq {
+  background: var(--accent);
+  color: #1a1000;
+}
+
+.btn-clear {
+  background: #2a1a1a;
+  color: var(--red);
+}
+
+.btn-back {
+  background: #1e1e2a;
+  color: #8888cc;
+}
+
+.btn-zero {
+  grid-column: span 2;
+}
+
+.footer {
+  margin-top: 16px;
+  font-size: .6rem;
+  color: #444;
+}
